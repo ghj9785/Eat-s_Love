@@ -28,10 +28,18 @@
 
     <!-- datepicker(달력팝업) -->
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker-standalone.css">
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
 
 
     <script>
@@ -47,19 +55,19 @@
         //     });
         // });
         $(function () {
-            $("#datepicker").datepicker({
-                dateFormat: 'yy-mm-dd'
-            });
+            $('#datetimepicker1').datetimepicker();
+        });
 
-            // // 초기값 오늘 날짜로 설정
-            // $('#datepicker').datepicker('setDate', 'today');
+        $('.starRev span').click(function () {
+            $(this).parent().children('span').removeClass('on');
+            $(this).addClass('on').prevAll('span').addClass('on');
+            return false;
         });
 
     </script>
 
     <style>
         .review1 {
-            background-color: green;
             padding: 1.5rem;
             margin: 2rem auto;
             border-color: darkgoldenrod;
@@ -68,6 +76,7 @@
             border-width: thin;
             display: block;
             width: 1000px;
+            height: 1000px;
         }
 
         .registerpage {
@@ -75,9 +84,6 @@
             text-align: center;
         }
 
-        .datepicker {
-            margin-left: 1200px;
-        }
 
         .mybtn {
             margin: 50px 0 20px 0;
@@ -94,9 +100,42 @@
             margin-right: 30px;
         }
 
-        .col-sm-2 {
-            margin-left: 1200px;
+        .col-sm-3 {
+            margin-right: 1000px;
+            align-items: center;
         }
+
+        .starR1 {
+            background: url('http://miuu227.godohosting.com/images/icon/ico_review.png') no-repeat -52px 0;
+            background-size: auto 100%;
+            width: 15px;
+            height: 30px;
+            float: left;
+            text-indent: -9999px;
+            cursor: pointer;
+        }
+
+        .starR2 {
+            background: url('http://miuu227.godohosting.com/images/icon/ico_review.png') no-repeat right 0;
+            background-size: auto 100%;
+            width: 15px;
+            height: 30px;
+            float: left;
+            text-indent: -9999px;
+            cursor: pointer;
+        }
+
+        .starR1.on {
+            background-position: 0 0;
+        }
+
+        .starR2.on {
+            background-position: -15px 0;
+        }
+
+        /* .col-sm-2 {
+            margin-left: 1200px;
+        } */
     </style>
 
 </head>
@@ -118,12 +157,18 @@
         <!--  이미지등록 -->
 
         <!-- datepicker 만들기 -->
-        <div class="col-sm-2">
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <i class="fa fa-calendar bigger-110"></i>
-                </span>
-                <input type="text" id="datepicker" class="form-control col-xs-12" />
+        <div class="container">
+            <div class="row">
+                <div class='col-sm-3'>
+                    <div class="form-group">
+                        <div class='input-group date' id='datetimepicker1'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -131,14 +176,24 @@
         <!-- 네이버주소록api 
 
         별점주기 -->
+        <div class="starRev">
+            <span class="starR1 on">별1_왼쪽</span>
+            <span class="starR2">별1_오른쪽</span>
+            <span class="starR1">별2_왼쪽</span>
+            <span class="starR2">별2_오른쪽</span>
+            <span class="starR1">별3_왼쪽</span>
+            <span class="starR2">별3_오른쪽</span>
+            <span class="starR1">별4_왼쪽</span>
+            <span class="starR2">별4_오른쪽</span>
+            <span class="starR1">별5_왼쪽</span>
+            <span class="starR2">별5_오른쪽</span>
+        </div>
 
-    </div>
+        <div class="reviewtext">
 
-    <div class="reviewtext">
+            <!-- 리뷰 text 쓰기 -->
 
-        <!-- 리뷰 text 쓰기 -->
-
-    </div>
+        </div>
 
 </body>
 
