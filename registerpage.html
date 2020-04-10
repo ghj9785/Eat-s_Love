@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Webpage Title -->
+    <title>Eat's Love</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+
+    <!-- datepicker(달력팝업) -->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+
+    <script>
+
+        // $("#datepicker").datepicker();
+
+        // $(function () {
+        //     $("#datepicker1").datepicker({
+        //         changeMonth: true,
+        //         changeYear: true,
+        //         nextText: '다음 달',
+        //         prevText: '이전 달'
+        //     });
+        // });
+        $(function () {
+            $("#datepicker").datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+
+            // // 초기값 오늘 날짜로 설정
+            // $('#datepicker').datepicker('setDate', 'today');
+        });
+
+    </script>
+
+    <style>
+        .review1 {
+            background-color: green;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            border-color: darkgoldenrod;
+            border-radius: 0.3rem;
+            border: solid;
+            border-width: thin;
+            display: block;
+            width: 1000px;
+        }
+
+        .registerpage {
+            margin: 50px 0 0 0;
+            text-align: center;
+        }
+
+        .datepicker {
+            margin-left: 1200px;
+        }
+
+        .mybtn {
+            margin: 50px 0 20px 0;
+            /* display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: 1010px; */
+            margin-left: 1200px;
+
+        }
+
+        .btn-outline-success {
+            margin-right: 30px;
+        }
+
+        .col-sm-2 {
+            margin-left: 1200px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="registerpage">
+        <h1> Register Page </h1>
+    </div>
+    <div class="mybtn">
+        <button onclick="btn1()" type="button" class="btn btn-outline-success">Register</button>
+        <button onclick="btn2()" type="button" class="btn btn-outline-secondary">Cancel</button>
+    </div>
+
+    <hr color="green" width=90%>
+
+    <div class="review1">
+
+        <!--  이미지등록 -->
+
+        <!-- datepicker 만들기 -->
+        <div class="col-sm-2">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="fa fa-calendar bigger-110"></i>
+                </span>
+                <input type="text" id="datepicker" class="form-control col-xs-12" />
+            </div>
+        </div>
+
+
+        <!-- 네이버주소록api 
+
+        별점주기 -->
+
+    </div>
+
+    <div class="reviewtext">
+
+        <!-- 리뷰 text 쓰기 -->
+
+    </div>
+
+</body>
+
+</html>
